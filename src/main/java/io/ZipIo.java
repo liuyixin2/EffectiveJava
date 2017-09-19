@@ -30,7 +30,7 @@ public class ZipIo {
         byte[] b= new byte[10];
         int len;
         while ((len = fileInputStream.read(b,0,b.length)) != -1){
-            System.out.println(len);
+            String string = new String(b,0,len);//由于是使用的是字节的形式读取的，所以会出现乱码的情况。
         }
     }
 }
