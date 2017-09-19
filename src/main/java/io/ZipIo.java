@@ -18,7 +18,8 @@ import java.net.URL;
  * ZipConstants 这个接口定义了使用的常量处理ZIP文件的类。
  * InputStream 这个抽象类是代表字节输入流的所有类的超类。其中MAX_SKIP_BUFFER_SIZE这个静态常量定义了确定跳过时使用的最大缓冲区大小。
  * InflaterInputStream 这个类实现了一个流过滤器，用于在“压缩”压缩格式中对未压缩的数据进行过滤。它还被用作其他解压缩过滤器的基础，如GZIPInputStream。
- * 在InflaterInputStream中有Inflater这个类的引用，
+ * 在InflaterInputStream中有Inflater这个类的引用。
+ * Inflater 提供了对通用解压的支持
  */
 public class ZipIo {
     public static void main(String[] args) throws Exception {
