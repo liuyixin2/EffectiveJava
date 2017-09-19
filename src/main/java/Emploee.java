@@ -39,4 +39,25 @@ public class Emploee {
         double rasie = salary + byPercent / 100;
         salary += rasie;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Emploee emploee = (Emploee) o;
+
+        if (Double.compare(emploee.salary, salary) != 0) return false;
+        return name != null ? name.equals(emploee.name) : emploee.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = name != null ? name.hashCode() : 0;
+        temp = Double.doubleToLongBits(salary);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }
